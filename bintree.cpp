@@ -159,7 +159,7 @@ int Tree::_numleaf(node n)
 
 void Tree::_levelorder(node n)
 {
-    queue nodequeue = {};
+    queue nodequeue = {0};
     enqueue(&nodequeue, n);
     while (!queue_empty(&nodequeue))
     {
