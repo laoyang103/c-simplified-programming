@@ -10,6 +10,14 @@ then
 else    
     echo "${a} -eq ${b}: FLASE"
 fi    
+if test ${a} -eq ${b}
+then
+    echo "test ${a} -eq ${b}: TRUE"
+else    
+    echo "test ${a} -eq ${b}: FLASE"
+fi    
+
+#############################################################
 
 if [ ${a} -ne ${b} ]
 then
@@ -17,6 +25,14 @@ then
 else    
     echo "${a} -ne ${b}: FLASE"
 fi    
+if test ${a} -ne ${b}
+then
+    echo "test ${a} -ne ${b}: TRUE"
+else    
+    echo "test ${a} -ne ${b}: FLASE"
+fi    
+
+#############################################################
 
 if [ ${a} -gt ${b} ]
 then
@@ -24,6 +40,14 @@ then
 else    
     echo "${a} -gt ${b}: FLASE"
 fi    
+if test ${a} -gt ${b}
+then
+    echo "test ${a} -gt ${b}: TRUE"
+else    
+    echo "test ${a} -gt ${b}: FLASE"
+fi    
+
+#############################################################
 
 if [ ${a} -lt ${b} ]
 then
@@ -31,6 +55,14 @@ then
 else    
     echo "${a} -lt ${b}: FLASE"
 fi    
+if test ${a} -lt ${b}
+then
+    echo "test ${a} -lt ${b}: TRUE"
+else    
+    echo "test ${a} -lt ${b}: FLASE"
+fi    
+
+#############################################################
 
 if [ ${a} -ge ${b} ]
 then
@@ -38,6 +70,14 @@ then
 else    
     echo "${a} -ge ${b}: FLASE"
 fi    
+if test ${a} -ge ${b}
+then
+    echo "test ${a} -ge ${b}: TRUE"
+else    
+    echo "test ${a} -ge ${b}: FLASE"
+fi    
+
+#############################################################
 
 if [ ${a} -le ${b} ]
 then
@@ -45,6 +85,14 @@ then
 else    
     echo "${a} -le ${b}: FLASE"
 fi    
+if test ${a} -le ${b}
+then
+    echo "test ${a} -le ${b}: TRUE"
+else    
+    echo "test ${a} -le ${b}: FLASE"
+fi    
+
+#############################################################
 
 if [ ${a} -le ${b} -a ${a} -gt 0 ]
 then
@@ -52,6 +100,14 @@ then
 else    
     echo "${a} -le ${b} -a ${a} -gt 0: FLASE"
 fi    
+if test ${a} -le ${b} -a ${a} -gt 0
+then
+    echo "test ${a} -le ${b} -a ${a} -gt 0: TRUE"
+else    
+    echo "test ${a} -le ${b} -a ${a} -gt 0: FLASE"
+fi    
+
+#############################################################
 
 if [ ${a} -ge ${b} -o ${a} -gt 10 ]
 then
@@ -59,6 +115,9 @@ then
 else    
     echo "${a} -le ${b} -o ${a} -gt 0: FLASE"
 fi    
-
-
-
+if test ${a} -ge ${b} -o ${a} -gt 10
+then
+    echo "test ${a} -le ${b} -o ${a} -gt 0: TRUE"
+else    
+    echo "test ${a} -le ${b} -o ${a} -gt 0: FLASE"
+fi    
