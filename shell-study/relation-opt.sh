@@ -121,3 +121,30 @@ then
 else    
     echo "test ${a} -le ${b} -o ${a} -gt 0: FLASE"
 fi    
+
+STRA="aaa"
+STRB="bbb"
+
+if [ $STRA == $STRB ]; then
+    echo "$STRA is equals $STRB"
+else    
+    echo "$STRA is not equals $STRB"
+fi    
+
+if [ $STRA != "aaa" ]; then
+    echo "$STRA is not equals aaa"
+else    
+    echo "$STRA is equals aaa"
+fi    
+
+
+
+
+
+
+
+
+
+
+
+
