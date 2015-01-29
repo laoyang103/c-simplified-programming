@@ -1,57 +1,69 @@
 #!/bin/bash
 
-file="/tmp/aa"
+FILE="/tmp/aa"
 
-if [ -r ${file} ]
+IFS=,
+echo "the script name is $0"
+echo '$@ is :'
+echo "$@"
+echo '$* is :'
+echo "$*"
+echo '$# is :'
+echo "$#"
+
+if [ -r ${FILE} ]
 then
-    echo "-r ${file}: has read access"
+    echo "-r ${FILE}: has read access"
 else
-    echo "-r ${file}: not has read access"
+    echo "-r ${FILE}: not has read access"
 fi    
 
-if [ -w ${file} ]
+if [ -w ${FILE} ]
 then
-    echo "-w ${file}: has write access"
+    echo "-w ${FILE}: has write access"
 else
-    echo "-w ${file}: not has write access"
+    echo "-w ${FILE}: not has write access"
 fi    
 
-if [ -x ${file} ]
+if [ -x ${FILE} ]
 then
-    echo "-x ${file}: has execute access"
+    echo "-x ${FILE}: has execute access"
 else
-    echo "-x ${file}: not has execute access"
+    echo "-x ${FILE}: not has execute access"
 fi    
 
-if [ -f ${file} ]
+if [ -f ${FILE} ]
 then
-    echo "-f ${file}: is a ordinary file"
+    echo "-f ${FILE}: is a ordinary FILE"
 else
-    echo "-f ${file}: is a sepcial file"
+    echo "-f ${FILE}: is a sepcial FILE"
 fi    
 
-if [ -d ${file} ]
+if [ -d ${FILE} ]
 then
-    echo "-d ${file}: is a directory"
+    echo "-d ${FILE}: is a directory"
 else
-    echo "-d ${file}: is not a directory"
+    echo "-d ${FILE}: is not a directory"
 fi    
 
-if [ -s ${file} ]
+if [ -s ${FILE} ]
 then
-    echo "-s ${file}: size is not zero"
+    echo "-s ${FILE}: size is not zero"
 else
-    echo "-s ${file}: size is zero"
+    echo "-s ${FILE}: size is zero"
 fi    
 
-if test -e ${file}
+if test -e ${FILE}
 then
-    echo "-e ${file}: is exist"
+    echo "-e ${FILE}: is exist"
 else
-    echo "-e ${file}: is not exist"
+    echo "-e ${FILE}: is not exist"
 fi    
 
+echo '================================================='
 
+[ -a $FILE ] && echo "[ -a $FILE ]: $FILE found" || echo "[ -a $FILE ]: $FILE not found"
+[ ! -a $FILE ] && { echo "can not found $FILE create it"; mkdir -p $FILE; }
 
 
 
