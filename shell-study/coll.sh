@@ -24,7 +24,7 @@ while true; do
         for ((i = 0; i < $PRRD_FIELD_LEN; i++)); do
             prrd_name=$PRRD_DIR$pname"_"${PRRD_FIELD[$i]}".rrd"
             if [ ! -e $prrd_name ]; then
-                rrdtool create $prrd_name --start $now --step 5 DS:NORMAL:GAUGE:90:U:U RRA:AVERAGE:0.5:1:1440
+                rrdtool create $prrd_name --start $now --step 5 DS:VALUE:GAUGE:90:U:U RRA:AVERAGE:0.5:1:1440
             fi
             echo "rrdtool update $prrd_name $now:${pdata[$i]}"
             rrdtool update $prrd_name $now:${pdata[$i]}
