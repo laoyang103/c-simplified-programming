@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ref http://www.cnblogs.com/clover-toeic/p/3754433.html
+
 // BSS segment
 int global;
 static int static_global;
