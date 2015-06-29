@@ -1,0 +1,7 @@
+1 2 3
+3 qq aa
+4 r gss
+5 t tt
+8 ww ss
+2 ww ss
+9 yy qq

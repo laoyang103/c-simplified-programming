@@ -1,0 +1,6 @@
+lao a b 1
+uu c d 1
+yyt e f 1
+sdf g h 1
+chen l o 1
+fang s e 5
