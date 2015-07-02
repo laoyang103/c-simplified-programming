@@ -56,13 +56,15 @@ Book::Book()
     }
     in.close();
 
-    in.open("lends.txt",ios::in);
     num_lends = 0;
-    while (in>>lends[num_lends].pname>>lends[num_lends].start>>lends[num_lends].end>>lends[num_lends].num) {
+    FILE *fp = fopen("lends.txt", "r");
+    while (EOF != fscanf(fp, "%s%s%s%d", &lends[num_lends].pname, &lends[num_lends].start, 
+                &lends[num_lends].end, &lends[num_lends].num)) {
         lends[num_lends].is_return = 0;
-        lends[num_lends].id = ++num_lends;
+        lends[num_lends].id = num_lends + 1;
+        num_lends ++;
     }
-    in.close();
+    fclose(fp);
 }
 void Book::Sort()
 {
