@@ -6,6 +6,8 @@
 // BSS segment
 int global;
 static int static_global;
+int global_zero = 0;
+static int static_global_zero = 0;
 
 // data segment
 int global_init = 5;
@@ -33,31 +35,31 @@ int main()
     char *pcode = "code segment str";
 
     puts("==============stack segment==============");
-    printf("local %p\n", &local);
-    printf("local1 %p\n", &local1);
+    printf("local                   %018p\n", &local);
+    printf("local1                  %018p\n", &local1);
     puts("==============stack segment==============");
 
     puts("==============heap segment==============");
-    printf("pheap %p\n", pheap);
-    printf("pheap1 %p\n", pheap1);
+    printf("pheap                   %018p\n", pheap);
+    printf("pheap1                  %018p\n", pheap1);
     puts("==============heap segment==============");
 
     puts("==============BSS segment==============");
-    printf("global %p\n", &global);
-    printf("static_global %p\n", &static_global);
-    printf("static_local %p\n", &static_local);
-    printf("static_local1 %p\n", &static_local1);
+    printf("global                  %018p\n", &global);
+    printf("static_global           %018p\n", &static_global);
+    printf("global_zero             %018p\n", &global_zero);
+    printf("static_global_zero      %018p\n", &static_global_zero);
     puts("==============BSS segment==============");
 
     puts("==============data segment==============");
-    printf("global_init %p\n", &global_init);
-    printf("static_global_init %p\n", &static_global_init);
-    printf("static_local_init %p\n", &static_local_init);
-    printf("static_local_init1 %p\n", &static_local_init1);
+    printf("global_init             %018p\n", &global_init);
+    printf("static_global_init      %018p\n", &static_global_init);
+    printf("static_local_init       %018p\n", &static_local_init);
+    printf("static_local_init1      %018p\n", &static_local_init1);
     puts("==============data segment==============");
 
     puts("==============code segment==============");
-    printf("pcode %p\n", pcode);
+    printf("pcode                   %018p\n", pcode);
     puts("==============code segment==============");
     return 0;
 }
